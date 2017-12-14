@@ -1,0 +1,6 @@
+node_modules
+.swp
+.temp
+.vscode
+dist
+log

@@ -1,0 +1,59 @@
+doctype html
+html
+    head
+        meta(charset="UTF-8")
+        title= title
+        meta(name="viewpaor",content="width=device-width, user-scalable=no, minmum-sacle=1.0, maximum-sacle=1.0")
+        link(rel='stylesheet',href='./public/css/style.css')
+        script(type="text/javascript",src="./public/js/jquery-3.1.1.js")
+        script.
+            var Width = window.innerWidth;
+            var Height = window.innerHeight;
+
+    body
+        div(class='back')
+        div(id='canvas3d')
+        //进度条
+        div(id='loaderdiv')
+            div(class='graph')
+                strong(id='bar',style='width:1%;')
+        
+        div(id='ThreeJS')
+                
+        script(type="text/javascript" src="./public/js/three.js")
+        script(type="text/javascript" src="./public/js/Detector.js")
+        script(type="text/javascript" src="./public/js/main.js")
+        script(type="text/javascript" src="./public/js/loaders/BinaryLoader.js")
+        script(type="text/javascript" src="./public/js/loaders/MTLLoader.js")
+        script(type="text/javascript" src="./public/js/loaders/OBJLoader.js")
+        script(type="text/javascript" src="./public/js/Tween.js")
+        script(type="text/javascript" src="./public/js/DragRotateControls.js")
+
+        script.
+            console.log('#{data.path}');
+            if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
+                var parObj = {
+                    objurl:'#{data.path}',
+                    near: #{data.near},
+                    far: #{data.far},
+                    minfov: #{data.minfov},
+                    maxfov: #{data.maxfov},
+                    moveSpeed: #{data.moveSpeed},
+                    rotateSpeed: #{data.rotateSpeed},
+                    zoomSpeed: #{data.zoomSpeed},
+                    modelPosition: new THREE.Vector3(#{data.modelPosition.x}, #{data.modelPosition.y}, #{data.modelPosition.z}),
+                    modelRotation: new THREE.Vector3(#{data.modelRotation.x}, #{data.modelRotation.y}, #{data.modelRotation.z}),
+                    lightSet:[
+                    {pos: 1, intensity: #{data.lightSet.intensity}, color: #{data.lightSet.color}}
+                    ],
+                    ambient: #{data.ambient},
+                    bgColor: #{data.bgColor},
+                    isMaterialColor: #{data.isMaterialColor},
+                    isSpecularColor: #{data.isSpecularColor},
+                    isMaterialShininess: #{data.isMaterialShininess},
+                    isMaterialOpacity: #{data.isMaterialOpacity},
+                    wireFrame: #{data.wireFrame},
+                };
+                
+                initScene(parObj);
+                                

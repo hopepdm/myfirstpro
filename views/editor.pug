@@ -1,0 +1,74 @@
+doctype html
+html
+    head
+        meta(charset="UTF-8")
+        title= title
+        link(rel='stylesheet',href='/colpick/css/colpick.css')
+        link(rel='stylesheet',href='/style/main.css')
+        link(rel='stylesheet',href='/style/reset.css')
+        link(rel='stylesheet',href='/font-awesome/css/font-awesome.min.css')
+        style.
+            body{overflow: hidden;}
+    body
+        div(class='header')
+            a(class='centerlogo' href="javascript:history.go(-1);" title="返回"): h1 数文三维文物展示平台
+    
+        .viewer
+        
+        //发布确认弹窗
+        div(class='modal publish_confirm')
+            div(class='modal_outer' )
+                //按钮
+                div(class='close')
+                div(class='modal_content')
+                    div(class='confirm_icon')
+                        i(class='fa fa-spinner fa-pulse fa-fw ')
+                    h2(class='confirm_text') 确认要发布吗？
+                    p(class='confirm_name') 文件: #{publish.name}
+                    div(class='confirm_button')
+                        button(class='cancel btn') 取消
+                        button(class='abort btn') 发布
+        script(type="text/javascript" src="/js/scripts/jquery-3.1.1.min.js")
+        script(type="text/javascript" src="/js/scripts/rangeslider.min.js")
+        script(type="text/javascript" src="/colpick/js/colpick.js")
+        script(type="text/javascript" src="/js/scripts/three.js")
+        script(type="text/javascript" src="/js/scripts/Detector.js")
+        script(type="text/javascript" src="/js/scripts/BinaryLoader.js")
+        script(type="text/javascript" src="/js/scripts/MTLLoader.js")
+        script(type="text/javascript" src="/js/scripts/OBJLoader.js")
+        script(type="text/javascript" src="/js/scripts/Tween.js")
+        script(type="text/javascript" src="/js/scripts/LightPositionControl.js")
+        script(type="text/javascript" src="/js/scripts/DragRotateControls.js")
+
+        script(type="text/javascript" src="/js/dat.gui.min.js")
+        script(type="text/javascript" src="/js/reEditor.js")
+
+
+                
+        script.
+            //console.log('/#{publish._id}' + '/#{publish.path}');
+            if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
+                var uid = '#{publish.culturalId}';
+                var parObj = {
+                    objurl:'/#{publish._id}' +'/#{publish.path}',
+                    near: 0.001,
+                    far: 10000,
+                    minfov: 0.5,
+                    maxfov: 8,
+                    moveSpeed: 0.5,
+                    rotateSpeed: 0.2,
+                    zoomSpeed: 0.5,
+                    modelPosition: new THREE.Vector3(0, 0, 0),
+                    modelRotation: new THREE.Vector3(0, 0, 0),
+                    lightSet:[
+                    {pos: 1, intensity: 1, color: 0xFFFFFF},
+                    {pos: 2, intensity: 1, color: 0xFFFFFF},
+                    {pos: 3, intensity: 1, color: 0xFFFFFF},
+                    {pos: 4, intensity: 1, color: 0xFFFFFF},
+                    {pos: 5, intensity: 1, color: 0xFFFFFF},
+                    {pos: 6, intensity: 1, color: 0xFFFFFF},
+                    ],
+                    ambient: true
+                };
+                
+                window.initScene(parObj);

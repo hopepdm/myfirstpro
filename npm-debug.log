@@ -1,0 +1,529 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'D:\\Soft\\nodejs\\node.exe',
+1 verbose cli   'D:\\Soft\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'express-generator',
+1 verbose cli   '-g' ]
+2 info using npm@2.15.1
+3 info using node@v4.4.3
+4 verbose install initial load of C:\Users\dct-webgl\AppData\Roaming\npm\package.json
+5 verbose readDependencies loading dependencies from C:\Users\dct-webgl\AppData\Roaming\npm\package.json
+6 silly cache add args [ 'express-generator', null ]
+7 verbose cache add spec express-generator
+8 silly cache add parsed spec Result {
+8 silly cache add   raw: 'express-generator',
+8 silly cache add   scope: null,
+8 silly cache add   name: 'express-generator',
+8 silly cache add   rawSpec: '',
+8 silly cache add   spec: 'latest',
+8 silly cache add   type: 'tag' }
+9 silly addNamed express-generator@latest
+10 verbose addNamed "latest" is being treated as a dist-tag for express-generator
+11 info addNameTag [ 'express-generator', 'latest' ]
+12 silly mapToRegistry name express-generator
+13 silly mapToRegistry using default registry
+14 silly mapToRegistry registry https://registry.npmjs.org/
+15 silly mapToRegistry data Result {
+15 silly mapToRegistry   raw: 'express-generator',
+15 silly mapToRegistry   scope: null,
+15 silly mapToRegistry   name: 'express-generator',
+15 silly mapToRegistry   rawSpec: '',
+15 silly mapToRegistry   spec: 'latest',
+15 silly mapToRegistry   type: 'tag' }
+16 silly mapToRegistry uri https://registry.npmjs.org/express-generator
+17 verbose addNameTag registry:https://registry.npmjs.org/express-generator not in flight; fetching
+18 verbose request uri https://registry.npmjs.org/express-generator
+19 verbose request no auth needed
+20 info attempt registry request try #1 at 10:49:44
+21 verbose request id 810066ce94838333
+22 http request GET https://registry.npmjs.org/express-generator
+23 http 200 https://registry.npmjs.org/express-generator
+24 verbose headers { 'content-type': 'application/json; charset=UTF-8',
+24 verbose headers   server: 'UploadServer',
+24 verbose headers   'cache-control': 'max-age=300',
+24 verbose headers   'last-modified': 'Mon, 4 Dec 2017 19:26:28 GMT',
+24 verbose headers   etag: '"5a25a164-a95d"',
+24 verbose headers   'content-encoding': 'gzip',
+24 verbose headers   'content-length': '5282',
+24 verbose headers   'accept-ranges': 'bytes',
+24 verbose headers   date: 'Wed, 13 Dec 2017 02:49:45 GMT',
+24 verbose headers   via: '1.1 varnish',
+24 verbose headers   age: '10876',
+24 verbose headers   connection: 'keep-alive',
+24 verbose headers   'x-served-by': 'cache-hnd18750-HND',
+24 verbose headers   'x-cache': 'HIT',
+24 verbose headers   'x-cache-hits': '11',
+24 verbose headers   'x-timer': 'S1513133386.637170,VS0,VE0',
+24 verbose headers   vary: 'Accept-Encoding, Accept' }
+25 silly get cb [ 200,
+25 silly get   { 'content-type': 'application/json; charset=UTF-8',
+25 silly get     server: 'UploadServer',
+25 silly get     'cache-control': 'max-age=300',
+25 silly get     'last-modified': 'Mon, 4 Dec 2017 19:26:28 GMT',
+25 silly get     etag: '"5a25a164-a95d"',
+25 silly get     'content-encoding': 'gzip',
+25 silly get     'content-length': '5282',
+25 silly get     'accept-ranges': 'bytes',
+25 silly get     date: 'Wed, 13 Dec 2017 02:49:45 GMT',
+25 silly get     via: '1.1 varnish',
+25 silly get     age: '10876',
+25 silly get     connection: 'keep-alive',
+25 silly get     'x-served-by': 'cache-hnd18750-HND',
+25 silly get     'x-cache': 'HIT',
+25 silly get     'x-cache-hits': '11',
+25 silly get     'x-timer': 'S1513133386.637170,VS0,VE0',
+25 silly get     vary: 'Accept-Encoding, Accept' } ]
+26 verbose get saving express-generator to C:\Users\dct-webgl\AppData\Roaming\npm-cache\registry.npmjs.org\express-generator\.cache.json
+27 verbose correctMkdir C:\Users\dct-webgl\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+28 silly addNameTag next cb for express-generator with tag latest
+29 silly addNamed express-generator@4.15.5
+30 verbose addNamed "4.15.5" is a plain semver version for express-generator
+31 silly mapToRegistry name express-generator
+32 silly mapToRegistry using default registry
+33 silly mapToRegistry registry https://registry.npmjs.org/
+34 silly mapToRegistry data Result {
+34 silly mapToRegistry   raw: 'express-generator',
+34 silly mapToRegistry   scope: null,
+34 silly mapToRegistry   name: 'express-generator',
+34 silly mapToRegistry   rawSpec: '',
+34 silly mapToRegistry   spec: 'latest',
+34 silly mapToRegistry   type: 'tag' }
+35 silly mapToRegistry uri https://registry.npmjs.org/express-generator
+36 verbose addRemoteTarball https://registry.npmjs.org/express-generator/-/express-generator-4.15.5.tgz not in flight; adding
+37 verbose addRemoteTarball [ 'https://registry.npmjs.org/express-generator/-/express-generator-4.15.5.tgz',
+37 verbose addRemoteTarball   '4e86ffe6cedb31126a2bf1dac01bd1795da6f978' ]
+38 info retry fetch attempt 1 at 10:49:46
+39 info attempt registry request try #1 at 10:49:46
+40 http fetch GET https://registry.npmjs.org/express-generator/-/express-generator-4.15.5.tgz
+41 info retry will retry, error on last attempt: Error: read ECONNRESET
+42 info attempt registry request try #2 at 10:49:56
+43 http fetch GET https://registry.npmjs.org/express-generator/-/express-generator-4.15.5.tgz
+44 info retry will retry, error on last attempt: Error: read ECONNRESET
+45 info attempt registry request try #3 at 10:50:57
+46 http fetch GET https://registry.npmjs.org/express-generator/-/express-generator-4.15.5.tgz
+47 error fetch failed https://registry.npmjs.org/express-generator/-/express-generator-4.15.5.tgz
+48 warn retry will retry, error on last attempt: Error: read ECONNRESET
+49 info retry fetch attempt 2 at 10:51:07
+50 info attempt registry request try #1 at 10:51:07
+51 http fetch GET https://registry.npmjs.org/express-generator/-/express-generator-4.15.5.tgz
+52 info retry will retry, error on last attempt: Error: read ECONNRESET
+53 info attempt registry request try #2 at 10:51:17
+54 http fetch GET https://registry.npmjs.org/express-generator/-/express-generator-4.15.5.tgz
+55 info retry will retry, error on last attempt: Error: read ECONNRESET
+56 info attempt registry request try #3 at 10:52:17
+57 http fetch GET https://registry.npmjs.org/express-generator/-/express-generator-4.15.5.tgz
+58 http fetch 200 https://registry.npmjs.org/express-generator/-/express-generator-4.15.5.tgz
+59 silly fetchAndShaCheck shasum 4e86ffe6cedb31126a2bf1dac01bd1795da6f978
+60 verbose addTmpTarball C:\Users\DCT-WE~1\AppData\Local\Temp\npm-8500-7ec0c746\registry.npmjs.org\express-generator\-\express-generator-4.15.5.tgz not in flight; adding
+61 verbose addTmpTarball already have metadata; skipping unpack for express-generator@4.15.5
+62 verbose correctMkdir C:\Users\dct-webgl\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+63 silly cache afterAdd express-generator@4.15.5
+64 verbose afterAdd C:\Users\dct-webgl\AppData\Roaming\npm-cache\express-generator\4.15.5\package\package.json not in flight; writing
+65 verbose correctMkdir C:\Users\dct-webgl\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+66 verbose afterAdd C:\Users\dct-webgl\AppData\Roaming\npm-cache\express-generator\4.15.5\package\package.json written
+67 silly install resolved [ { name: 'express-generator',
+67 silly install resolved     description: 'Express\' application generator',
+67 silly install resolved     version: '4.15.5',
+67 silly install resolved     author: { name: 'TJ Holowaychuk', email: 'tj@vision-media.ca' },
+67 silly install resolved     contributors: [ [Object], [Object], [Object], [Object], [Object], [Object] ],
+67 silly install resolved     keywords:
+67 silly install resolved      [ 'express',
+67 silly install resolved        'framework',
+67 silly install resolved        'sinatra',
+67 silly install resolved        'web',
+67 silly install resolved        'rest',
+67 silly install resolved        'restful',
+67 silly install resolved        'router',
+67 silly install resolved        'app',
+67 silly install resolved        'api' ],
+67 silly install resolved     repository:
+67 silly install resolved      { type: 'git',
+67 silly install resolved        url: 'git+https://github.com/expressjs/generator.git' },
+67 silly install resolved     license: 'MIT',
+67 silly install resolved     dependencies:
+67 silly install resolved      { commander: '2.11.0',
+67 silly install resolved        ejs: '2.5.7',
+67 silly install resolved        mkdirp: '0.5.1',
+67 silly install resolved        'sorted-object': '2.0.1' },
+67 silly install resolved     main: 'bin/express-cli.js',
+67 silly install resolved     preferGlobal: true,
+67 silly install resolved     bin: { express: './bin/express-cli.js' },
+67 silly install resolved     devDependencies:
+67 silly install resolved      { eslint: '3.19.0',
+67 silly install resolved        'eslint-config-standard': '10.2.1',
+67 silly install resolved        'eslint-plugin-import': '2.7.0',
+67 silly install resolved        'eslint-plugin-node': '5.2.0',
+67 silly install resolved        'eslint-plugin-promise': '3.5.0',
+67 silly install resolved        'eslint-plugin-standard': '3.0.1',
+67 silly install resolved        mocha: '2.5.3',
+67 silly install resolved        rimraf: '2.5.4',
+67 silly install resolved        supertest: '1.2.0',
+67 silly install resolved        'tree-kill': '1.2.0',
+67 silly install resolved        'validate-npm-package-name': '2.2.2' },
+67 silly install resolved     engines: { node: '>= 0.10' },
+67 silly install resolved     files: [ 'LICENSE', 'bin/', 'templates/' ],
+67 silly install resolved     scripts:
+67 silly install resolved      { lint: 'eslint .',
+67 silly install resolved        test: 'mocha --reporter spec --bail --check-leaks test/',
+67 silly install resolved        'test-ci': 'mocha --reporter spec --check-leaks test/' },
+67 silly install resolved     gitHead: '3b023c6282237307204f4ff450cfb3a8cb2656ed',
+67 silly install resolved     bugs: { url: 'https://github.com/expressjs/generator/issues' },
+67 silly install resolved     homepage: 'https://github.com/expressjs/generator#readme',
+67 silly install resolved     _id: 'express-generator@4.15.5',
+67 silly install resolved     _npmVersion: '5.3.0',
+67 silly install resolved     _nodeVersion: '6.11.3',
+67 silly install resolved     _npmUser: { name: 'dougwilson', email: 'doug@somethingdoug.com' },
+67 silly install resolved     dist:
+67 silly install resolved      { integrity: 'sha512-tvlHj1kw4bmoBFzJFFg0ng+6GHIBd09vA85oUoVtMiijUQtixzgU8Luio2XL/uEQ6nwJtKqdh2+fg1JFn3Wkvg==',
+67 silly install resolved        shasum: '4e86ffe6cedb31126a2bf1dac01bd1795da6f978',
+67 silly install resolved        tarball: 'https://registry.npmjs.org/express-generator/-/express-generator-4.15.5.tgz' },
+67 silly install resolved     maintainers: [ [Object] ],
+67 silly install resolved     _npmOperationalInternal:
+67 silly install resolved      { host: 's3://npm-registry-packages',
+67 silly install resolved        tmp: 'tmp/express-generator-4.15.5.tgz_1506814038766_0.5750876057427377' },
+67 silly install resolved     directories: {},
+67 silly install resolved     _shasum: '4e86ffe6cedb31126a2bf1dac01bd1795da6f978',
+67 silly install resolved     _resolved: 'https://registry.npmjs.org/express-generator/-/express-generator-4.15.5.tgz',
+67 silly install resolved     _from: 'express-generator@latest' } ]
+68 info install express-generator@4.15.5 into C:\Users\dct-webgl\AppData\Roaming\npm
+69 info installOne express-generator@4.15.5
+70 verbose installOne of express-generator to C:\Users\dct-webgl\AppData\Roaming\npm not in flight; installing
+71 verbose correctMkdir C:\Users\dct-webgl\AppData\Roaming\npm-cache\_locks correctMkdir not in flight; initializing
+72 verbose lock using C:\Users\dct-webgl\AppData\Roaming\npm-cache\_locks\express-generator-d8b864ef670ce6e1.lock for C:\Users\dct-webgl\AppData\Roaming\npm\node_modules\express-generator
+73 silly install write writing express-generator 4.15.5 to C:\Users\dct-webgl\AppData\Roaming\npm\node_modules\express-generator
+74 verbose unbuild node_modules\express-generator
+75 silly gentlyRm C:\Users\dct-webgl\AppData\Roaming\npm\node_modules\express-generator is being purged from base C:\Users\dct-webgl\AppData\Roaming\npm
+76 verbose gentlyRm don't care about contents; nuking C:\Users\dct-webgl\AppData\Roaming\npm\node_modules\express-generator
+77 verbose tar unpack C:\Users\dct-webgl\AppData\Roaming\npm-cache\express-generator\4.15.5\package.tgz
+78 verbose tar unpacking to C:\Users\dct-webgl\AppData\Roaming\npm\node_modules\express-generator
+79 silly gentlyRm C:\Users\dct-webgl\AppData\Roaming\npm\node_modules\express-generator is being purged
+80 verbose gentlyRm don't care about contents; nuking C:\Users\dct-webgl\AppData\Roaming\npm\node_modules\express-generator
+81 silly gunzTarPerm modes [ '777', '666' ]
+82 silly gunzTarPerm extractEntry package.json
+83 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+84 silly gunzTarPerm extractEntry README.md
+85 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
+86 silly gunzTarPerm extractEntry LICENSE
+87 silly gunzTarPerm modified mode [ 'LICENSE', 420, 438 ]
+88 silly gunzTarPerm extractEntry bin/express-cli.js
+89 silly gunzTarPerm modified mode [ 'bin/express-cli.js', 493, 511 ]
+90 silly gunzTarPerm extractEntry templates/css/style.css
+91 silly gunzTarPerm modified mode [ 'templates/css/style.css', 420, 438 ]
+92 silly gunzTarPerm extractEntry templates/css/style.less
+93 silly gunzTarPerm modified mode [ 'templates/css/style.less', 420, 438 ]
+94 silly gunzTarPerm extractEntry templates/css/style.sass
+95 silly gunzTarPerm modified mode [ 'templates/css/style.sass', 420, 438 ]
+96 silly gunzTarPerm extractEntry templates/css/style.scss
+97 silly gunzTarPerm modified mode [ 'templates/css/style.scss', 420, 438 ]
+98 silly gunzTarPerm extractEntry templates/css/style.styl
+99 silly gunzTarPerm modified mode [ 'templates/css/style.styl', 420, 438 ]
+100 silly gunzTarPerm extractEntry templates/dust/error.dust
+101 silly gunzTarPerm modified mode [ 'templates/dust/error.dust', 420, 438 ]
+102 silly gunzTarPerm extractEntry templates/dust/index.dust
+103 silly gunzTarPerm modified mode [ 'templates/dust/index.dust', 420, 438 ]
+104 silly gunzTarPerm extractEntry templates/ejs/error.ejs
+105 silly gunzTarPerm modified mode [ 'templates/ejs/error.ejs', 420, 438 ]
+106 silly gunzTarPerm extractEntry templates/ejs/index.ejs
+107 silly gunzTarPerm modified mode [ 'templates/ejs/index.ejs', 420, 438 ]
+108 silly gunzTarPerm extractEntry templates/hbs/error.hbs
+109 silly gunzTarPerm modified mode [ 'templates/hbs/error.hbs', 420, 438 ]
+110 silly gunzTarPerm extractEntry templates/hbs/index.hbs
+111 silly gunzTarPerm modified mode [ 'templates/hbs/index.hbs', 420, 438 ]
+112 silly gunzTarPerm extractEntry templates/hbs/layout.hbs
+113 silly gunzTarPerm modified mode [ 'templates/hbs/layout.hbs', 420, 438 ]
+114 silly gunzTarPerm extractEntry templates/hogan/error.hjs
+115 silly gunzTarPerm modified mode [ 'templates/hogan/error.hjs', 420, 438 ]
+116 silly gunzTarPerm extractEntry templates/hogan/index.hjs
+117 silly gunzTarPerm modified mode [ 'templates/hogan/index.hjs', 420, 438 ]
+118 silly gunzTarPerm extractEntry templates/jade/error.jade
+119 silly gunzTarPerm modified mode [ 'templates/jade/error.jade', 420, 438 ]
+120 silly gunzTarPerm extractEntry templates/jade/index.jade
+121 silly gunzTarPerm modified mode [ 'templates/jade/index.jade', 420, 438 ]
+122 silly gunzTarPerm extractEntry templates/jade/layout.jade
+123 silly gunzTarPerm modified mode [ 'templates/jade/layout.jade', 420, 438 ]
+124 silly gunzTarPerm extractEntry templates/js/app.js.ejs
+125 silly gunzTarPerm modified mode [ 'templates/js/app.js.ejs', 420, 438 ]
+126 silly gunzTarPerm extractEntry templates/js/gitignore
+127 silly gunzTarPerm modified mode [ 'templates/js/gitignore', 420, 438 ]
+128 silly gunzTarPerm extractEntry templates/js/routes/index.js
+129 silly gunzTarPerm modified mode [ 'templates/js/routes/index.js', 420, 438 ]
+130 silly gunzTarPerm extractEntry templates/js/routes/users.js
+131 silly gunzTarPerm modified mode [ 'templates/js/routes/users.js', 420, 438 ]
+132 silly gunzTarPerm extractEntry templates/js/www.ejs
+133 silly gunzTarPerm modified mode [ 'templates/js/www.ejs', 420, 438 ]
+134 silly gunzTarPerm extractEntry templates/pug/error.pug
+135 silly gunzTarPerm modified mode [ 'templates/pug/error.pug', 420, 438 ]
+136 silly gunzTarPerm extractEntry templates/pug/index.pug
+137 silly gunzTarPerm modified mode [ 'templates/pug/index.pug', 420, 438 ]
+138 silly gunzTarPerm extractEntry templates/pug/layout.pug
+139 silly gunzTarPerm modified mode [ 'templates/pug/layout.pug', 420, 438 ]
+140 silly gunzTarPerm extractEntry templates/twig/error.twig
+141 silly gunzTarPerm modified mode [ 'templates/twig/error.twig', 420, 438 ]
+142 silly gunzTarPerm extractEntry templates/twig/index.twig
+143 silly gunzTarPerm modified mode [ 'templates/twig/index.twig', 420, 438 ]
+144 silly gunzTarPerm extractEntry templates/twig/layout.twig
+145 silly gunzTarPerm modified mode [ 'templates/twig/layout.twig', 420, 438 ]
+146 silly gunzTarPerm extractEntry templates/vash/error.vash
+147 silly gunzTarPerm modified mode [ 'templates/vash/error.vash', 420, 438 ]
+148 silly gunzTarPerm extractEntry templates/vash/index.vash
+149 silly gunzTarPerm modified mode [ 'templates/vash/index.vash', 420, 438 ]
+150 silly gunzTarPerm extractEntry templates/vash/layout.vash
+151 silly gunzTarPerm modified mode [ 'templates/vash/layout.vash', 420, 438 ]
+152 verbose write writing to C:\Users\dct-webgl\AppData\Roaming\npm\node_modules\express-generator\package.json
+153 info preinstall express-generator@4.15.5
+154 verbose readDependencies loading dependencies from C:\Users\dct-webgl\AppData\Roaming\npm\node_modules\express-generator\package.json
+155 silly prepareForInstallMany adding commander@2.11.0 from express-generator dependencies
+156 silly prepareForInstallMany adding ejs@2.5.7 from express-generator dependencies
+157 silly prepareForInstallMany adding mkdirp@0.5.1 from express-generator dependencies
+158 silly prepareForInstallMany adding sorted-object@2.0.1 from express-generator dependencies
+159 verbose readDependencies loading dependencies from C:\Users\dct-webgl\AppData\Roaming\npm\node_modules\express-generator\package.json
+160 silly cache add args [ 'commander@2.11.0', null ]
+161 verbose cache add spec commander@2.11.0
+162 silly cache add args [ 'ejs@2.5.7', null ]
+163 verbose cache add spec ejs@2.5.7
+164 silly cache add parsed spec Result {
+164 silly cache add   raw: 'commander@2.11.0',
+164 silly cache add   scope: null,
+164 silly cache add   name: 'commander',
+164 silly cache add   rawSpec: '2.11.0',
+164 silly cache add   spec: '2.11.0',
+164 silly cache add   type: 'version' }
+165 silly addNamed commander@2.11.0
+166 verbose addNamed "2.11.0" is a plain semver version for commander
+167 silly mapToRegistry name commander
+168 silly mapToRegistry using default registry
+169 silly mapToRegistry registry https://registry.npmjs.org/
+170 silly mapToRegistry data Result {
+170 silly mapToRegistry   raw: 'commander',
+170 silly mapToRegistry   scope: null,
+170 silly mapToRegistry   name: 'commander',
+170 silly mapToRegistry   rawSpec: '',
+170 silly mapToRegistry   spec: 'latest',
+170 silly mapToRegistry   type: 'tag' }
+171 silly mapToRegistry uri https://registry.npmjs.org/commander
+172 verbose addNameVersion registry:https://registry.npmjs.org/commander not in flight; fetching
+173 silly cache add parsed spec Result {
+173 silly cache add   raw: 'ejs@2.5.7',
+173 silly cache add   scope: null,
+173 silly cache add   name: 'ejs',
+173 silly cache add   rawSpec: '2.5.7',
+173 silly cache add   spec: '2.5.7',
+173 silly cache add   type: 'version' }
+174 silly addNamed ejs@2.5.7
+175 verbose addNamed "2.5.7" is a plain semver version for ejs
+176 silly mapToRegistry name ejs
+177 silly mapToRegistry using default registry
+178 silly mapToRegistry registry https://registry.npmjs.org/
+179 silly mapToRegistry data Result {
+179 silly mapToRegistry   raw: 'ejs',
+179 silly mapToRegistry   scope: null,
+179 silly mapToRegistry   name: 'ejs',
+179 silly mapToRegistry   rawSpec: '',
+179 silly mapToRegistry   spec: 'latest',
+179 silly mapToRegistry   type: 'tag' }
+180 silly mapToRegistry uri https://registry.npmjs.org/ejs
+181 verbose addNameVersion registry:https://registry.npmjs.org/ejs not in flight; fetching
+182 silly cache add args [ 'mkdirp@0.5.1', null ]
+183 verbose cache add spec mkdirp@0.5.1
+184 silly cache add parsed spec Result {
+184 silly cache add   raw: 'mkdirp@0.5.1',
+184 silly cache add   scope: null,
+184 silly cache add   name: 'mkdirp',
+184 silly cache add   rawSpec: '0.5.1',
+184 silly cache add   spec: '0.5.1',
+184 silly cache add   type: 'version' }
+185 silly addNamed mkdirp@0.5.1
+186 verbose addNamed "0.5.1" is a plain semver version for mkdirp
+187 silly mapToRegistry name mkdirp
+188 silly mapToRegistry using default registry
+189 silly mapToRegistry registry https://registry.npmjs.org/
+190 silly mapToRegistry data Result {
+190 silly mapToRegistry   raw: 'mkdirp',
+190 silly mapToRegistry   scope: null,
+190 silly mapToRegistry   name: 'mkdirp',
+190 silly mapToRegistry   rawSpec: '',
+190 silly mapToRegistry   spec: 'latest',
+190 silly mapToRegistry   type: 'tag' }
+191 silly mapToRegistry uri https://registry.npmjs.org/mkdirp
+192 verbose addNameVersion registry:https://registry.npmjs.org/mkdirp not in flight; fetching
+193 silly cache add args [ 'sorted-object@2.0.1', null ]
+194 verbose cache add spec sorted-object@2.0.1
+195 silly cache add parsed spec Result {
+195 silly cache add   raw: 'sorted-object@2.0.1',
+195 silly cache add   scope: null,
+195 silly cache add   name: 'sorted-object',
+195 silly cache add   rawSpec: '2.0.1',
+195 silly cache add   spec: '2.0.1',
+195 silly cache add   type: 'version' }
+196 silly addNamed sorted-object@2.0.1
+197 verbose addNamed "2.0.1" is a plain semver version for sorted-object
+198 silly mapToRegistry name sorted-object
+199 silly mapToRegistry using default registry
+200 silly mapToRegistry registry https://registry.npmjs.org/
+201 silly mapToRegistry data Result {
+201 silly mapToRegistry   raw: 'sorted-object',
+201 silly mapToRegistry   scope: null,
+201 silly mapToRegistry   name: 'sorted-object',
+201 silly mapToRegistry   rawSpec: '',
+201 silly mapToRegistry   spec: 'latest',
+201 silly mapToRegistry   type: 'tag' }
+202 silly mapToRegistry uri https://registry.npmjs.org/sorted-object
+203 verbose addNameVersion registry:https://registry.npmjs.org/sorted-object not in flight; fetching
+204 verbose request uri https://registry.npmjs.org/commander
+205 verbose request no auth needed
+206 info attempt registry request try #1 at 10:52:26
+207 http request GET https://registry.npmjs.org/commander
+208 verbose request uri https://registry.npmjs.org/ejs
+209 verbose request no auth needed
+210 info attempt registry request try #1 at 10:52:26
+211 http request GET https://registry.npmjs.org/ejs
+212 verbose request uri https://registry.npmjs.org/sorted-object
+213 verbose request no auth needed
+214 info attempt registry request try #1 at 10:52:26
+215 http request GET https://registry.npmjs.org/sorted-object
+216 verbose request uri https://registry.npmjs.org/mkdirp
+217 verbose request no auth needed
+218 info attempt registry request try #1 at 10:52:26
+219 verbose etag "5a2daaa8-6920"
+220 verbose lastModified Sun, 10 Dec 2017 21:44:08 GMT
+221 http request GET https://registry.npmjs.org/mkdirp
+222 info retry will retry, error on last attempt: Error: read ECONNRESET
+223 info retry will retry, error on last attempt: Error: read ECONNRESET
+224 info retry will retry, error on last attempt: Error: read ECONNRESET
+225 info retry will retry, error on last attempt: Error: read ECONNRESET
+226 info attempt registry request try #2 at 10:52:36
+227 http request GET https://registry.npmjs.org/commander
+228 info retry will retry, error on last attempt: Error: read ECONNRESET
+229 info attempt registry request try #2 at 10:52:36
+230 http request GET https://registry.npmjs.org/sorted-object
+231 info attempt registry request try #2 at 10:52:36
+232 http request GET https://registry.npmjs.org/ejs
+233 info retry will retry, error on last attempt: Error: read ECONNRESET
+234 info attempt registry request try #2 at 10:52:37
+235 verbose etag "5a2daaa8-6920"
+236 verbose lastModified Sun, 10 Dec 2017 21:44:08 GMT
+237 http request GET https://registry.npmjs.org/mkdirp
+238 info retry will retry, error on last attempt: Error: read ECONNRESET
+239 info retry will retry, error on last attempt: Error: read ECONNRESET
+240 info attempt registry request try #3 at 10:53:36
+241 http request GET https://registry.npmjs.org/commander
+242 info attempt registry request try #3 at 10:53:36
+243 http request GET https://registry.npmjs.org/sorted-object
+244 info attempt registry request try #3 at 10:53:37
+245 verbose etag "5a2daaa8-6920"
+246 verbose lastModified Sun, 10 Dec 2017 21:44:08 GMT
+247 http request GET https://registry.npmjs.org/mkdirp
+248 silly get cb [ 304, undefined ]
+249 verbose etag https://registry.npmjs.org/mkdirp from cache
+250 verbose get saving mkdirp to C:\Users\dct-webgl\AppData\Roaming\npm-cache\registry.npmjs.org\mkdirp\.cache.json
+251 verbose correctMkdir C:\Users\dct-webgl\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+252 silly cache afterAdd mkdirp@0.5.1
+253 verbose afterAdd C:\Users\dct-webgl\AppData\Roaming\npm-cache\mkdirp\0.5.1\package\package.json not in flight; writing
+254 verbose correctMkdir C:\Users\dct-webgl\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+255 verbose afterAdd C:\Users\dct-webgl\AppData\Roaming\npm-cache\mkdirp\0.5.1\package\package.json written
+256 info attempt registry request try #3 at 10:53:39
+257 http request GET https://registry.npmjs.org/ejs
+258 http 200 https://registry.npmjs.org/ejs
+259 verbose headers { 'content-type': 'application/json; charset=UTF-8',
+259 verbose headers   server: 'UploadServer',
+259 verbose headers   'cache-control': 'max-age=300',
+259 verbose headers   'last-modified': 'Sat, 9 Dec 2017 23:29:15 GMT',
+259 verbose headers   etag: '"5a2c71cb-11479"',
+259 verbose headers   'content-encoding': 'gzip',
+259 verbose headers   'content-length': '11445',
+259 verbose headers   'accept-ranges': 'bytes',
+259 verbose headers   date: 'Wed, 13 Dec 2017 02:53:40 GMT',
+259 verbose headers   via: '1.1 varnish',
+259 verbose headers   age: '10761',
+259 verbose headers   connection: 'keep-alive',
+259 verbose headers   'x-served-by': 'cache-hnd18724-HND',
+259 verbose headers   'x-cache': 'HIT',
+259 verbose headers   'x-cache-hits': '33',
+259 verbose headers   'x-timer': 'S1513133620.315819,VS0,VE0',
+259 verbose headers   vary: 'Accept-Encoding, Accept' }
+260 silly get cb [ 200,
+260 silly get   { 'content-type': 'application/json; charset=UTF-8',
+260 silly get     server: 'UploadServer',
+260 silly get     'cache-control': 'max-age=300',
+260 silly get     'last-modified': 'Sat, 9 Dec 2017 23:29:15 GMT',
+260 silly get     etag: '"5a2c71cb-11479"',
+260 silly get     'content-encoding': 'gzip',
+260 silly get     'content-length': '11445',
+260 silly get     'accept-ranges': 'bytes',
+260 silly get     date: 'Wed, 13 Dec 2017 02:53:40 GMT',
+260 silly get     via: '1.1 varnish',
+260 silly get     age: '10761',
+260 silly get     connection: 'keep-alive',
+260 silly get     'x-served-by': 'cache-hnd18724-HND',
+260 silly get     'x-cache': 'HIT',
+260 silly get     'x-cache-hits': '33',
+260 silly get     'x-timer': 'S1513133620.315819,VS0,VE0',
+260 silly get     vary: 'Accept-Encoding, Accept' } ]
+261 verbose get saving ejs to C:\Users\dct-webgl\AppData\Roaming\npm-cache\registry.npmjs.org\ejs\.cache.json
+262 verbose correctMkdir C:\Users\dct-webgl\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+263 silly mapToRegistry name ejs
+264 silly mapToRegistry using default registry
+265 silly mapToRegistry registry https://registry.npmjs.org/
+266 silly mapToRegistry data Result {
+266 silly mapToRegistry   raw: 'ejs',
+266 silly mapToRegistry   scope: null,
+266 silly mapToRegistry   name: 'ejs',
+266 silly mapToRegistry   rawSpec: '',
+266 silly mapToRegistry   spec: 'latest',
+266 silly mapToRegistry   type: 'tag' }
+267 silly mapToRegistry uri https://registry.npmjs.org/ejs
+268 verbose addRemoteTarball https://registry.npmjs.org/ejs/-/ejs-2.5.7.tgz not in flight; adding
+269 verbose addRemoteTarball [ 'https://registry.npmjs.org/ejs/-/ejs-2.5.7.tgz',
+269 verbose addRemoteTarball   'cc872c168880ae3c7189762fd5ffc00896c9518a' ]
+270 info retry fetch attempt 1 at 10:53:40
+271 info attempt registry request try #1 at 10:53:40
+272 http fetch GET https://registry.npmjs.org/ejs/-/ejs-2.5.7.tgz
+273 http fetch 200 https://registry.npmjs.org/ejs/-/ejs-2.5.7.tgz
+274 silly fetchAndShaCheck shasum cc872c168880ae3c7189762fd5ffc00896c9518a
+275 verbose addTmpTarball C:\Users\DCT-WE~1\AppData\Local\Temp\npm-8500-7ec0c746\registry.npmjs.org\ejs\-\ejs-2.5.7.tgz not in flight; adding
+276 verbose addTmpTarball already have metadata; skipping unpack for ejs@2.5.7
+277 verbose correctMkdir C:\Users\dct-webgl\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+278 silly cache afterAdd ejs@2.5.7
+279 verbose afterAdd C:\Users\dct-webgl\AppData\Roaming\npm-cache\ejs\2.5.7\package\package.json not in flight; writing
+280 verbose correctMkdir C:\Users\dct-webgl\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+281 verbose afterAdd C:\Users\dct-webgl\AppData\Roaming\npm-cache\ejs\2.5.7\package\package.json written
+282 verbose about to build C:\Users\dct-webgl\AppData\Roaming\npm\node_modules\express-generator
+283 verbose unlock done using C:\Users\dct-webgl\AppData\Roaming\npm-cache\_locks\express-generator-d8b864ef670ce6e1.lock for C:\Users\dct-webgl\AppData\Roaming\npm\node_modules\express-generator
+284 verbose stack Error: read ECONNRESET
+284 verbose stack     at exports._errnoException (util.js:870:11)
+284 verbose stack     at TLSWrap.onread (net.js:552:26)
+285 verbose cwd D:\DCT\threeplatform\ThreePlatform
+286 error Windows_NT 10.0.15063
+287 error argv "D:\\Soft\\nodejs\\node.exe" "D:\\Soft\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "express-generator" "-g"
+288 error node v4.4.3
+289 error npm  v2.15.1
+290 error code ECONNRESET
+291 error errno ECONNRESET
+292 error syscall read
+293 error network read ECONNRESET
+293 error network This is most likely not a problem with npm itself
+293 error network and is related to network connectivity.
+293 error network In most cases you are behind a proxy or have bad network settings.
+293 error network
+293 error network If you are behind a proxy, please make sure that the
+293 error network 'proxy' config is set properly.  See: 'npm help config'
+294 verbose exit [ 1, true ]
+295 verbose unbuild node_modules\express-generator
+296 info preuninstall express-generator@4.15.5
+297 info uninstall express-generator@4.15.5
+298 verbose unbuild rmStuff express-generator@4.15.5 from C:\Users\dct-webgl\AppData\Roaming\npm\node_modules
+299 silly gentlyRm C:\Users\dct-webgl\AppData\Roaming\npm\express.cmd is being gently removed
+300 silly gentlyRm verifying C:\Users\dct-webgl\AppData\Roaming\npm is an npm working directory
+301 silly gentlyRm containing path C:\Users\dct-webgl\AppData\Roaming\npm is under npm's control, in C:\Users\dct-webgl\AppData\Roaming\npm
+302 silly gentlyRm deletion target C:\Users\dct-webgl\AppData\Roaming\npm\express.cmd is under C:\Users\dct-webgl\AppData\Roaming\npm
+303 verbose gentlyRm vacuuming from C:\Users\dct-webgl\AppData\Roaming\npm\express.cmd up to C:\Users\dct-webgl\AppData\Roaming\npm
+304 silly gentlyRm C:\Users\dct-webgl\AppData\Roaming\npm\express is being gently removed
+305 silly gentlyRm verifying C:\Users\dct-webgl\AppData\Roaming\npm is an npm working directory
+306 silly gentlyRm containing path C:\Users\dct-webgl\AppData\Roaming\npm is under npm's control, in C:\Users\dct-webgl\AppData\Roaming\npm
+307 silly gentlyRm deletion target C:\Users\dct-webgl\AppData\Roaming\npm\express is under C:\Users\dct-webgl\AppData\Roaming\npm
+308 verbose gentlyRm vacuuming from C:\Users\dct-webgl\AppData\Roaming\npm\express up to C:\Users\dct-webgl\AppData\Roaming\npm
+309 info postuninstall express-generator@4.15.5
+310 silly gentlyRm C:\Users\dct-webgl\AppData\Roaming\npm\node_modules\express-generator is being purged from base C:\Users\dct-webgl\AppData\Roaming\npm
+311 verbose gentlyRm don't care about contents; nuking C:\Users\dct-webgl\AppData\Roaming\npm\node_modules\express-generator
+312 silly vacuum-fs purging C:\Users\dct-webgl\AppData\Roaming\npm\node_modules\express-generator
+313 silly vacuum-fs quitting because other entries in C:\Users\dct-webgl\AppData\Roaming\npm\node_modules

@@ -1,0 +1,180 @@
+doctype html
+html
+    head
+        meta(charset="UTF-8")
+        title= title
+        link(rel='stylesheet',href='/colpick/css/colpick.css')
+        link(rel='stylesheet',href='/style/main.css')
+        link(rel='stylesheet',href='/style/reset.css')
+        link(rel='stylesheet',href='/font-awesome/css/font-awesome.min.css')
+        style.
+            body{overflow: hidden;}
+    body
+        div(class='header')
+            a(href="javascript:history.go(-1)"): h1 数文科技三维文物展示平台
+        .menu_tag
+        .viewer
+        .explorer
+            .menu_wrap
+                .menu_title_wrap
+                    h6.menu_title 工&nbsp具
+                    span.menu_close +
+                .menu
+                    ul
+                        li(data-light)
+                            .menu_item
+                                i.menu_item_img.bright
+                                span.menu_item_name 灯光属性
+                        li(data-material)
+                            .menu_item
+                                i.menu_item_img.bright
+                                span.menu_item_name 材质属性
+                        li(data-position)
+                            .menu_item
+                                i.menu_item_img.bright
+                                span.menu_item_name 位置属性
+                        li(data-other)
+                            .menu_item
+                                i.menu_item_img.bright
+                                span.menu_item_name 其他属性
+                        li(class='publish_file' data-id=''+publish._id)
+                            .menu_item
+                                i(class="fa fa-envelope" aria-hidden="true")
+                                span.menu_item_name 发布
+            .menu_content_wrap.light_set
+                .menu_content_title
+                    h6.menu_title 灯光属性
+                    span.menu_close +
+                .menu_content
+                    .light_source.tool_item
+                        span.tool_name 灯光选择
+                        ul.lights
+                            li.light_item.light1.active
+                            li.light_item.light2
+                            li.light_item.light3
+                    .light_position.tool_item
+                        span.tool_name 灯光位置
+                        .lightControl#lightControl
+                    .light_intensity.tool_item
+                        span.tool_name 灯光强度           
+                        .inputdiv
+                          label.true              
+                          .range                     
+                              input(type="range" min="0" max="10" data-rangeslider)
+                    .light_color.tool_item
+                        span.tool_name 灯光颜色
+                        #lightcol                  
+            .menu_content_wrap.material_set           
+                .menu_content_title
+                    h6.menu_title 材质属性
+                    span.menu_close +
+                .menu_content
+                    .material_type.tool_item
+                        span.tool_name 颜色类型
+                        ul.materials
+                            li.material_item.color.active(title="材质固有色color")
+                            li.material_item.emissive(title="材质反射色emissive")
+                            li.material_item.specular(title="镜反射色specular")
+                    .material_color.tool_item
+                        span.tool_name 材质固有色
+                        #matcol
+                    .material_opacity.tool_item
+                        span.tool_name 透明度
+                        .inputdiv
+                            .range
+                                input(type="range" min="0" max="1" step="0.1" value="1" data-rangeslider)
+                    .material_specularity.tool_item
+                        span.tool_name 高光亮度
+                        .inputdiv
+                            .range
+                                input(type="range" min="0" max="100" step="5" data-rangeslider)
+            .menu_content_wrap.position_set
+                .menu_content_title
+                    h6.menu_title 位置属性
+                    span.menu_close +
+                .menu_content
+                    .position_reset.tool_item
+                        span.tool_name  复位
+                        .btn_reset
+            .menu_content_wrap.other_set
+                .menu_content_title
+                    h6.menu_title 其他属性
+                    span.menu_close +
+                .menu_content
+                    .rotate_speed.tool_item
+                        span.tool_name 旋转速度
+                        .inputdiv
+                            .range
+                                input(type="range" min="0" max="20" data-rangeslider)
+                    .zoomspeed.tool_item
+                        span.tool_name 缩放速度
+                        .inputdiv
+                            .range
+                                input(type="range" min="0" max="20" data-rangeslider)
+                    .zoomrange.tool_item
+                        span.tool_name 缩放范围
+                        .inputdiv
+                            .number
+                                span MIN:
+                                input(type='number' max='5' min='1' step='0.5' value='2')
+                            .number
+                                span MAX:
+                                input(type='number' max='5' min='1' step='0.5' value='2')
+
+        //发布确认弹窗
+        div(class='modal publish_confirm')
+            div(class='modal_outer' )
+                //按钮
+                div(class='close')
+                div(class='modal_content')
+                    div(class='confirm_icon')
+                        i(class='fa fa-spinner fa-pulse fa-fw ')
+                    h2(class='confirm_text') 确认要发布吗？
+                    p(class='confirm_name') 文件: #{publish.name}
+                    div(class='confirm_button')
+                        button(class='cancel btn') 取消
+                        button(class='abort btn') 发布
+        script(type="text/javascript" src="/js/scripts/jquery-3.1.1.min.js")
+        script(type="text/javascript" src="/js/scripts/rangeslider.min.js")
+        script(type="text/javascript" src="/colpick/js/colpick.js")
+        script(type="text/javascript" src="/js/scripts/three.js")
+        script(type="text/javascript" src="/js/scripts/Detector.js")
+        script(type="text/javascript" src="/js/scripts/BinaryLoader.js")
+        script(type="text/javascript" src="/js/scripts/MTLLoader.js")
+        script(type="text/javascript" src="/js/scripts/OBJLoader.js")
+        script(type="text/javascript" src="/js/scripts/Tween.js")
+        script(type="text/javascript" src="/js/scripts/LightPositionControl.js")
+        script(type="text/javascript" src="/js/scripts/DragRotateControls.js")
+        script(type="text/javascript" src="/js/lightControl.js")
+        script(type="text/javascript" src="/js/Tool.js")
+        script(type="text/javascript" src="/js/dat.gui.min.js")
+        script(type="text/javascript" src="/js/reEditor.js")
+
+
+                
+        script.
+            console.log('/#{publish._id}' + '/#{publish.path}');
+            if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
+                var parObj = {
+                    objurl:'/#{publish._id}' +'/#{publish.path}',
+                    near: 0.001,
+                    far: 10000,
+                    minfov: 0.4,
+                    maxfov: 2,
+                    moveSpeed: 0.5,
+                    rotateSpeed: 0.2,
+                    zoomSpeed: 0.5,
+                    modelPosition: new THREE.Vector3(0, 0, 0),
+                    modelRotation: new THREE.Vector3(0, 0, 0),
+                    lightSet:[
+                    {pos: 1, intensity: 1, color: 0xFFFFFF},
+                    {pos: 2, intensity: 1, color: 0xFFFFFF},
+                    {pos: 3, intensity: 1, color: 0xFFFFFF},
+                    {pos: 4, intensity: 1, color: 0xFFFFFF},
+                    {pos: 5, intensity: 1, color: 0xFFFFFF},
+                    {pos: 6, intensity: 1, color: 0xFFFFFF},
+                    ],
+                    ambient: true
+                };
+                
+                window.initScene(parObj);

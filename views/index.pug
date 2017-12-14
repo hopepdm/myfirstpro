@@ -1,0 +1,99 @@
+extends layout
+block content
+    //新建项目框
+    div(class='up_load change_modal')
+        p
+            i(class="fa fa-folder-open" aria-hidden="true")
+        p
+            span(class='up_load_title') 新建项目
+    //新建项目提示弹窗modal
+    div(class='modal new_project')
+        div(class='modal_outer' )
+            //按钮
+            div(class='close')
+            //内容层
+            form(class='modal_content' action='/api/project' method='post' autocomplete='off')
+                div(class='modal_title')
+                    span(class='pre_text') 项目名称：
+                    input(type='text' name='proName' autofocus='autofocus' placeholder='必填：不能超过50字符')
+                    //span(class='pre_text') 不超过50字符
+                div(class='modal_intro')
+                    div
+                        span(class='pre_text') 项目介绍：
+                    textarea( maxlength='500' name='proDescription' rows='6' placeholder='必填：请对项目进行简单描述,方便管理...')
+                    //span(class='pre_text') 最多500字符
+                //存储地址
+                //- div(class='save_as')
+                //-     p
+                //-         span(class='pre_text') 上传路径：
+                //-         input(type='text' class='load_url' name='culturalUploadPath')
+                //-     p
+                //-         span(class='pre_text' ) 下载地址：
+                //-         input(type='text' class='down_url' name='proDestPath')
+                div(class='confirm')
+                    input(type='submit'  name='button' value='确认提交')
+    //弹窗modal结束
+    //文物模块儿
+    div(class='up_load_item')
+      each val in content
+        div(class='item')
+            div(class='item_close')
+                a(href='javascript:;' class='delete_item' data-id='' + val.projectID data-name='' + val.proName) 删除
+            div(class='item_top' title='项目介绍：' + val.proDescription)
+                h2(class='item_title')= val.proName + '-'
+                    span= val.culturalCount +'件文物'
+                span(class='item_content') 创建时间：
+                time(class='item_time')= val.proDate.toLocaleString()
+            ul(class='item_bottom clearfix')
+                li
+                    span(class='item_status') 已上传：
+                    span.item_loaded= val.culturalCount
+                li
+                    span.item_status 已发布：
+                    span.item_publish= val.publishedCount
+            span
+                a(href='/upload/'+val.projectID)
+                    i(class="fa fa-plus" aria-hidden="true")
+                    span(class='item_new') 添加新文物
+    //删除项目弹窗
+    div(class='modal delete_project')
+        div(class='modal_outer' )
+            //按钮
+            div(class='close')
+            div(class='modal_content')
+                div(class='confirm_icon')
+                    i(class="fa fa-meh-o" aria-hidden="true")
+                h2(class='confirm_text') 您要抛弃我吗？
+                p(class='confirm_name')
+                div(class='confirm_button')
+                    button(class='cancel btn') 取消
+                    button(class='abort btn') 确定
+    //文物模块儿结束
+    //分页
+    - var n = 1
+    if content.length==0
+        div(class='no_data')
+            img(src='/image/no_data.jpg')
+            p
+                span(class='no_data_info') 请添加文件
+    else
+        div(class='page')
+                if isFirstpage
+                    a(href='?page=1'  class='disable_page') 首页
+                    a(href='?page='+(page-1)  class='disable_page') 上一页
+                else
+                    a(href='?page=1') 首页
+                    a(href='?page='+(page-1)) 上一页
+                while n <= pages
+                  if n == page
+                        a(href='?page='+n class='page_tag active')= n++
+                  else
+                        a(href='?page='+n class='page_tag ')= n++
+                if isLastage
+                    a(href='?page='+n  class='disable_page') 下一页
+                    a(href='?page='+pages  class='disable_page') 尾页
+                else
+                    a(href='?page='+(page+1)) 下一页
+                    a(href='?page='+pages) 尾页
+    script(type='text/javascript' src='/js/scripts/jquery-3.1.1.min.js')
+    script(type='text/javascript' src='/js/main.js')

@@ -1,0 +1,160 @@
+extends layout
+block content
+    //拖拽上传
+    div(class='up_load drag_load')
+        p
+            i(class="fa fa-upload" aria-hidden="true")
+        p(class='info')
+            span(class='up_load_title') 请将文物压缩包拖入点击上传
+    //上传按钮
+    div(class='publish_item')
+        a(href='javascript:;' class='publish')
+            i(class="fa fa-paper-plane" aria-hidden="true") 
+            |上传
+    //进度条
+    div(class='progress' )
+        div(class='progress_bg')
+            div(class='progress_bar')
+                span
+            //通过js来改变宽度，然后动画进行缓动效果
+        div(class='progress_num')
+            div(class='division clearfix')
+                span
+                span
+                span
+                span
+                span
+                span
+                span
+                span
+                span
+            div(class='divnum')
+                ul
+                    li(class='z-ov') Go
+                    li(class='z-ov') 10%
+                    li(class='z-ov') 20%
+                    li(class='z-ov') 30%
+                    li(class='z-ov') 40%
+                    li(class='z-ov') 50%
+                    li(class='z-ov') 60%
+                    li(class='z-ov') 70%
+                    li(class='z-ov') 80%
+                    li(class='z-ov') 90%
+                    li(class='') 100%
+                //ov表示已传，on表示所在位置
+    //编辑弹窗
+    div(class='modal edit_modal')
+        div(class='modal_outer' )
+            //按钮
+            div(class='close')
+            form(class='modal_content'   autocomplete='off')
+                div(class='modal_title change')
+                    span(class='pre_text') 页面标题：
+                    input(type='text' name='pageTitle' autofocus='autofocus' placeholder='title')
+                    span(class='pre_text title') 不超过50字符
+                div(class='modal_title change')
+                    span(class='pre_text') 发布名称：
+                    input(type='text' name='pageName' placeholder='文件名' )
+                    span(class='pre_text nama') 输入文件前缀
+                div(class='confirm')
+                    input( type='submit' name='button' value='确认提交')
+
+    //文件列表table
+    div(class='file_list')
+        table(class='list_content')
+            thead
+                tr
+                    th
+                        label(class='select select_all')
+                            input(type='checkbox' class='hidden-input select-all')
+                            span(class="mime")
+                            span(class='chose') 全选
+
+                    th 文物名称
+                    th 发布状态
+                    th 文件名
+                    th 页面title
+                    th 文件操作
+            tbody
+            if data
+              each val in data
+                tr
+                    td
+                        label(class='select select_more')
+                            input(type='checkbox' class='hidden-input')
+                            span(class="mime")
+                    td= val.fileName
+                    if(val.isPublish == 1)
+                      td(class='up_status_loaded') 已发布
+                      td #{val.pageName + '.html'}
+                      td #{val.pageTitle}
+                      td
+                          //a(href='jacascript:;' class='file_publish file' data-id='' + val._id) 发布
+                          a(href='javascript:;' class='file_edit file' data-id='' + JSON.stringify(val)) 编辑
+                          a(href='/editor/' + val._id class='file_change file') 修改
+                          a(href='javascript:;' class='file_delete file' data-id='' + val._id data-name='' + val.fileName data-status=''+val.isPublish data-filename=''+val.pageName) 删除
+                    else
+                      td(class='up_status_unload') 未发布
+                      td #{val.pageName+'.html'}
+                      td #{val.pageTitle}
+                      td
+                        a(href='jacascript:;' class='file_publish file' data-id='' + val._id data-name='' + val.fileName) 发布
+                        a(href='javascript:;' class='file_edit file' data-id=''+val._id) 编辑
+                        a(href='/editor/'+val._id class='file_change file') 修改
+                        a(href='javascript:;' class='file_delete file' data-id=''+val._id data-name=''+val.fileName data-status=''+val.isPublish data-filename=''+val.pageName) 删除
+
+
+    //删除弹窗
+    div(class='modal file_confirm')
+        div(class='modal_outer' )
+            //按钮
+            div(class='close')
+            div(class='modal_content')
+                div(class='confirm_icon')
+                    i(class="fa fa-meh-o" aria-hidden="true")
+                h2(class='confirm_text') 您要抛弃我吗？
+                p(class='confirm_name')
+                div(class='confirm_button')
+                    button(class='cancel btn') 取消
+                    button(class='abort btn') 我恨你！
+    //发布弹窗
+    div(class='modal publish_cultural')
+        div(class='modal_outer')
+            //按钮
+            div(class='close')
+            div(class='modal_content')
+                div(class='confirm_icon')
+                    i(class='fa' aria-hidden='true')
+                h2(class='confirm_text') 您确定要发布吗？
+                p(class='confirm_name')
+                div(class='confirm_button')
+                    button(class='cancel btn') 取消
+                    button(class='abort btn') 确定                    
+    - var n = 1
+    if !pageSys||pageSys.count==0
+        div(class='no_data')
+            img(src='/image/no_data.jpg')
+            p
+                span(class='no_data_info') 请上传文件
+    else
+        div(class='page')
+            if pageSys.isFirstpage
+                a(href='?page=1'  class='disable_page') 首页
+                a(href='?page=' + (pageSys.page - 1)  class='disable_page') 上一页
+            else
+                a(href='?page=1') 首页
+                a(href='?page=' + (pageSys.page - 1)) 上一页
+            while n <= pageSys.pages
+                if n == pageSys.page
+                    a(href='?page=' + n class='page_tag active')= n++
+                else
+                    a(href='?page=' + n class='page_tag ')= n++
+            if pageSys.isLastage
+                a(href='?page=' + n  class='disable_page') 下一页
+                a(href='?page=' + pageSys.pages  class='disable_page') 尾页
+            else
+                a(href='?page=' + (pageSys.page + 1)) 下一页
+                a(href='?page=' + pageSys.pages) 尾页
+
+    script(type='text/javascript' src='/js/scripts/jquery-3.1.1.min.js')
+    script(type='text/javascript' src='/js/main.js')

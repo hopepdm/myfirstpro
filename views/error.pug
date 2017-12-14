@@ -1,0 +1,21 @@
+doctype html
+html
+    head
+        title 页面错误
+        link(rel='stylesheet',href='/style/reset.css')
+        link(rel='stylesheet', href='/style/main.css')
+        link(rel='stylesheet',href='/font-awesome/css/font-awesome.min.css')
+    body
+        div(class='error_img' style={background:'url(/image/error.png) center no-repeat'})
+        h1(class='message')
+            p(class='status') #{err.status} !
+            p 我有一双美丽的眼睛，在黑暗中依旧明亮动人。。
+        hr
+        section(class='reason')
+            span 可能原因：
+            span= err 
+        section(class='direction')
+            span(class='back_up') 原路返回
+            span(class='refresh') 驻足观赏
+    script(type='text/javascript' src='/js/scripts/jquery-3.1.1.min.js')
+    script(type='text/javascript' src='/js/main.js')
